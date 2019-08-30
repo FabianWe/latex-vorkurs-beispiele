@@ -1,0 +1,28 @@
+\documentclass[a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\title{Grafiken}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+Ein bild kann so eingefügt werden:
+
+\begin{center}
+    \includegraphics{images/logo}
+    % Bilder sollten in einem eigenen Ordner liegen
+\end{center}
+
+Man kann auch die Größe des Bildes ändern:
+
+\includegraphics[width=2cm]{images/logo.pdf}
+% Normalerweise lässt man die Dateiendung einfach weg, man kann sie dennoch mit angeben
+% Der Dateipfad wird im Linux-Stil angegeben, also Ordner getrennt durch /
+% images/logo.pdf ist ein relativer Pfad (von der aktuellen Datei aus)
+\end{document}

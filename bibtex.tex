@@ -1,0 +1,33 @@
+\documentclass[a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes} % kann das wörtliche zitieren erleichtern
+
+\title{Referenzen und Zitieren mit bibtex}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+% Hier zitieren wir mit dem \cite Befehl
+% in einem .bib file stehen mehrere Einträge, diese muss man nicht von Hand schreiben sondern kann sie z.B. aus google scholar kopieren: scholar.google.com
+Alan Turing hat in seinem wegweisenden Artikel „On computable numbers, with an application to the Entscheidungsproblem“ \cite{turing1937computable} bewiesen, dass es Probleme gibt, für die kein Algorithmus existieren kann der diese löst.
+Hierzu zählt zum Beispiel das bekannte Halteproblem.
+Oder wie Turing selbst gesagt hat:
+% Der folgende Befehl ist aus dem csquotes Paket, kann man nehmen, muss man aber nicht
+\enquote{[\dots] what I shall prove is quite different from the well-known results of Gödel [\dots] I shall now show that there is no general method which tells whether a given formula \(U\) is provable in \(K\)}.
+
+% Hier wird der Style festgelegt, es gibt da verschiedene
+\bibliographystyle{apalike}
+% Hier wird unsere Datei refs.bib geladen, die Endung .bib muss weggelassen werden
+\bibliography{refs}
+% Hinweis: Damit bibtex richtig funktioniert, muss pdflatex mehrfach gestartet werden.
+% Die Reihenfolge ist wie folgt (jeweils auf die Datei die man kompilieren will losgelassen)
+% pdflatex
+% bibtex
+% pdflatex
+% pdflatex
+\end{document}

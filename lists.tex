@@ -1,0 +1,39 @@
+\documentclass[a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumerate} % Für weitere Aufzählungstypen
+
+\title{Aufzählungen}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Aufzählung}
+\begin{itemize}
+    \item Foo
+    \item Bar
+\end{itemize}
+
+\section*{Aufzählung mit Zahlen}
+\begin{enumerate}
+    \item Der erste
+    \item Der zweite
+\end{enumerate}
+
+\section*{Selbstdefinierte Aufzählung mit enumerate Paket}
+\begin{enumerate}[(a)]
+    \item Lösung zu Teilaufgabe (a)
+    \item Lösung zu Teilaufgabe (b)
+\end{enumerate}
+
+\section*{Beschreibung mit description}
+\begin{description}
+    \item[Gandalf] Ein ganz toller Zauberer
+    \item[Lord Voldemort] Ein sehr, sehr böser Zauberer.
+    Übrigens sehen descriptions auch immer noch gut aus, wenn der Text über mehrere Zeilen geht, deshalb ein wenig bla bla hier.
+\end{description}
+\end{document}

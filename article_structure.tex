@@ -1,0 +1,31 @@
+\documentclass[a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum} % zum Erzeugen von dummy Text
+
+\title{Dokument Struktur}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Erster Teil}
+Hier steht jetzt irgendwas \textit{tolles}.
+
+\section{Zweiter Teil}
+Hier steht noch was unglaublich \textbf{tolleres}. Damit es nicht so leer ist etwas mehr Text.
+
+\lipsum[1]
+
+\subsection{Eine Unterüberschrift}
+\lipsum[2]
+
+\section*{Das Ende}
+Ein * am Ende der Befehle sorgt dafür, dass keine Numerierung eingefügt wird.
+Diese erscheinen auch nicht im Inhaltsverzeichnis.
+\end{document}

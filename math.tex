@@ -1,0 +1,65 @@
+\documentclass[a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools} % oft wird stattdessen amsmath verwendet, mathtools kann bisschen mehr
+\usepackage{amssymb} % Lädt mathematische Symbole
+
+\title{Mathematische Formeln}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Inline}
+In einem Text kann inline eine Formel eingefügt werden, das geht ganz einfach \(a^2 + b^2 = c^2\).
+% ^ sorgt dafür, dass das folgende Zeichen hochgestellt wird.
+
+\section*{Symbole}
+Im sogenannten \textit{math mode} können auch viele mathematische Symbole verwendet werden: \(\mathbb{N}, \varphi, \alpha\)
+
+\section*{Mehrzeilige Formeln}
+Für mehrzeilige Formeln verwendet man meist die align Umgebung.
+% Der Stern entfernt die Nummerierung
+\begin{align*}
+(a + b)^2 &= (a + b) \cdot (a + b)\\
+          &= a^2 + 2ab + b^2
+\end{align*}
+% Das & Zeichen sorgt dafür, dass die nachfolgenden Zeichen untereinander stehen
+% Sollen mehrere Zeichen hochgestellt werden (nicht nur das nächste), so wird der entsprechende Block in { } eingefasst
+
+Mit Nummerierung erhalten wir:
+\begin{align}
+(a + b)^2 &= (a + b) \cdot (a + b)\\
+          &= a^2 + 2ab + b^2
+\end{align}
+
+Man kann auch Integrale und Summen einfach schreiben, ebenso sind Brüche möglich:
+\begin{align*}
+    \sum\limits_{i=0}^n i = \frac{n (n + 1)}{2}
+\end{align*}
+Ein Integral geht so:
+\begin{align*}
+    \int\limits_0^3 4x\ dx = 18
+\end{align*}
+% \ gefolgt von einem Leerzeichen erzwingt einen Abstand, ansonsten hängt es bisschen nah aneinander
+Im Fließtext verwendet man hingegen eher kompakte Darstellungen, z.B. \(\int_0^3 4x\ dx = 18\) oder \(\sum_{i=0}^n a_i \coloneqq a_0 + a_1 + \dots + a_n \).
+% \limits sorgt dafür, dass "i = 0" und "n" unter bzw. über dem Symbol erscheinen.
+% _ sorgt dafür, dass das folgende Zeichen tiefergestellt wird
+
+Verwendet man Klammern, kann das ganze auch schonmal etwas komisch aussehen, wie hier:
+\begin{equation*}
+    (\frac{a}{2} + \frac{b}{4})8
+\end{equation*}
+Aber auch dafür hat \LaTeX{} eine Lösung:
+\begin{equation*}
+    \left(\frac{a}{2} + \frac{b}{4}\right)8
+\end{equation*}
+Will man größere Brüche darstellen, kann man die dfrac Umgebung verwenden:
+\begin{equation*}
+    \dfrac{ \frac{a}{2} }{ b } \cdot 8
+\end{equation*}
+Matrizen usw. sind natürlich auch möglich.
+\end{document}

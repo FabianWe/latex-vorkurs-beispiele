@@ -1,0 +1,41 @@
+\documentclass[a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+
+\title{Tabellen}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{tabular}
+\begin{center}
+% {l|ll} gibt an: Es gibt drei Spalten, zwischen der ersten und zweiten gibt es eine vertikale Trennlinie.
+% Alle drei Spalten sind linksbündig. Weitere Werte sind c (zentriert) und r (rechtsbündig)
+\begin{tabular}{l|ll}
+Studiengang & WS 16/17 & WS 17/18  \\ \hline % hline erzeugt horizontale Trennlinie
+Informatik & 904 & 941\\
+MST & 916 & 879\\
+SSE & 42 & 78
+\end{tabular}
+% Einzelne Spalten werden durch & getrennt
+\end{center}
+
+\section*{booktabs}
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+% Tabellen: Übersichtlich halten, Linien vermeiden (max. 3 Stück) ==> booktabs Paket
+\toprule
+Studiengang & WS 16/17 & WS 17/18  \\
+\midrule
+Informatik & 904 & 941\\
+MST & 916 & 879\\
+SSE & 42 & 78\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{document}
